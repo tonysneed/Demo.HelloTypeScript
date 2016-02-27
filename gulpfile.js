@@ -7,7 +7,12 @@ gulp.task('compile', function () {
     exec('rm -rf dist && tsc -p src');
 });
 
-gulp.task('serve-tests', function () {
+gulp.task('watch', ['compile'], function () {
+    
+    return gulp.watch('./src/**/*.ts', ['compile']);
+});
+
+gulp.task('test', ['watch'], function () {
     
     var options = {
         port: 3000,

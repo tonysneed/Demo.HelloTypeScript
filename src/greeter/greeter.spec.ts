@@ -1,7 +1,5 @@
 /// <reference path="../../typings/main.d.ts" />
 
-import {Greeter} from "./greeter";
-
 describe("Greeter", () => {
 
     describe("greet", () => {
@@ -9,7 +7,7 @@ describe("Greeter", () => {
         it("returns Hello World", () => {
 
             // Arrange
-            let greeter = new Greeter("World");
+            let greeter = new HelloTypeScript.Greeter("World");
 
             // Act
             let result = greeter.greet();

@@ -9,8 +9,13 @@
         {
             "taskName": "compile",
             "isBuildCommand": true,
-            "showOutput": "always",
+            "showOutput": "silent",
             "problemMatcher": "$gulp-tsc"
+        },
+        {
+            "taskName": "test",
+            "isTestCommand": true,
+            "showOutput": "always"
         }
     ]
 }
