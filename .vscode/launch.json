@@ -1,0 +1,16 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Debug Current File",
+			"type": "node",
+			"request": "launch",
+			"program": "${file}",
+			"stopOnEntry": false,
+			"args": [],
+			"sourceMaps": true,
+            "cwd": "${workspaceRoot}",
+            "outDir": "${workspaceRoot}/dist"
+		}
+	]
+}
