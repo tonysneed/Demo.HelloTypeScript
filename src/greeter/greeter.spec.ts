@@ -1,5 +1,7 @@
 /// <reference path="../../typings/main.d.ts" />
 
+import { HelloTypeScript.Greeter } from "./greeter";
+
 describe("Greeter", () => {
 
     describe("greet", () => {

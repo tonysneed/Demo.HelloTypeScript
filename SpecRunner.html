@@ -14,7 +14,10 @@
   <script src="node_modules/systemjs/dist/system.js"></script>
   <script>
       System.config({ packages: { 'dist': {defaultExtension: 'js'}}});
-      Promise.all([System.import('dist/italiangreeter/italiangreeter.spec')]);
+      Promise.all([
+          System.import('dist/greeter/greeter.spec'),
+          System.import('dist/italiangreeter/italiangreeter.spec'),
+      ]);
   </script>
 
   <!-- include source files here... -->

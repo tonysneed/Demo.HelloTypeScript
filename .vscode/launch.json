@@ -11,6 +11,20 @@
 			"sourceMaps": true,
             "cwd": "${workspaceRoot}",
             "outDir": "${workspaceRoot}/dist"
+		},
+		{
+			"name": "Debug Tests",
+			"type": "node",
+			"request": "launch",
+			"program": "${workspaceRoot}/node_modules/jasmine-node/bin/jasmine-node",
+			"stopOnEntry": false,
+			"args": [
+                "dist",
+				"--verbose"
+            ],
+			"cwd": "${workspaceRoot}",
+			"sourceMaps": true,
+			"outDir": "${workspaceRoot}/dist"
 		}
 	]
 }

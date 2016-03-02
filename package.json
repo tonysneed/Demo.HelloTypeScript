@@ -14,6 +14,7 @@
     "browser-sync": "^2.11.1",
     "gulp": "^3.9.1",
     "jasmine-core": "^2.4.1",
+    "jasmine-node": "^1.14.5",
     "systemjs": "^0.19.22"
   }
 }

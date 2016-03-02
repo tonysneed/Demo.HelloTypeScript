@@ -1,7 +1,7 @@
 /**
  * HelloTypeScript.Greeter
  */
-namespace HelloTypeScript {
+export namespace HelloTypeScript {
     export class Greeter {
         constructor(public message: string) {
 
