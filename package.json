@@ -12,9 +12,16 @@
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.11.1",
+    "glob": "^7.0.0",
     "gulp": "^3.9.1",
+    "gulp-inject": "^3.0.0",
+    "gulp-inject-string": "^1.1.0",
+    "gulp-load-plugins": "^1.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-task-listing": "^1.0.1",
     "jasmine-core": "^2.4.1",
     "jasmine-node": "^1.14.5",
+    "path": "^0.12.7",
     "systemjs": "^0.19.22"
   }
 }

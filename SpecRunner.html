@@ -1,36 +1,41 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="utf-8">
-  <title>Jasmine Spec Runner v2.4.1</title>
+    <meta charset="utf-8">
+    <title>Jasmine Spec Runner v2.4.1</title>
 
-  <link rel="shortcut icon" type="image/png" href="lib/jasmine-2.4.1/jasmine_favicon.png">
-  <link rel="stylesheet" href="lib/jasmine-2.4.1/jasmine.css">
+    <link rel="shortcut icon" type="image/png" href="lib/jasmine-2.4.1/jasmine_favicon.png">
+    <link rel="stylesheet" href="lib/jasmine-2.4.1/jasmine.css">
 
-  <script src="lib/jasmine-2.4.1/jasmine.js"></script>
-  <script src="lib/jasmine-2.4.1/jasmine-html.js"></script>
-  <script src="lib/jasmine-2.4.1/boot.js"></script>
-  
-  <script src="node_modules/systemjs/dist/system.js"></script>
-  <script>
-      System.config({ packages: { 'dist': {defaultExtension: 'js'}}});
+    <script src="lib/jasmine-2.4.1/jasmine.js"></script>
+    <script src="lib/jasmine-2.4.1/jasmine-html.js"></script>
+    <script src="lib/jasmine-2.4.1/boot.js"></script>
+
+    <script src="node_modules/systemjs/dist/system.js"></script>
+    <script src="util/system.imports.js"></script>
+    <!--<script>
+        System.config({ packages: { 'dist': {defaultExtension: 'js'}}});
       Promise.all([
           System.import('dist/greeter/greeter.spec'),
           System.import('dist/italiangreeter/italiangreeter.spec'),
       ]);
-  </script>
+    </script>-->
 
-  <!-- include source files here... -->
-  <script src="dist/greeter/greeter.js"></script>
-  <script src="dist/italiangreeter/italiangreeter.js"></script>
+    <!-- inject:js -->
+    <script src="dist/app.js"></script>
+    <script src="dist/greeter/greeter.js"></script>
+    <script src="dist/italiangreeter/italiangreeter.js"></script>
+    <!-- endinject -->
 
-  <!-- include spec files here... -->
-  <!--<script src="src/sample.spec.js"></script>-->
-  <script src="dist/greeter/greeter.spec.js"></script>
-  <script src="dist/italiangreeter/italiangreeter.spec.js"></script>
+    <!-- inject:specs:js -->
+    <script src="dist/greeter/greeter.spec.js"></script>
+    <script src="dist/italiangreeter/italiangreeter.spec.js"></script>
+    <!-- endinject -->
 
 </head>
 
 <body>
 </body>
+
 </html>

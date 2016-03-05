@@ -25,6 +25,18 @@
 			"cwd": "${workspaceRoot}",
 			"sourceMaps": true,
 			"outDir": "${workspaceRoot}/dist"
+		},
+		{
+			"name": "Debug Gulp Task",
+			"type": "node",
+			"request": "launch",
+			"program": "${workspaceRoot}/node_modules/gulp/bin/gulp.js",
+			"stopOnEntry": false,
+			"args": [
+                // Replace 'default' with name of gulp task to run
+                "imports:inject"
+            ],
+			"cwd": "${workspaceRoot}"
 		}
 	]
 }
