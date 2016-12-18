@@ -1,6 +1,4 @@
-/// <reference path="../../typings/main.d.ts" />
-
-import ItalianGreeter from "./italiangreeter";
+import { ItalianGreeter } from "./italiangreeter";
 
 describe("ItalianGreeter", () => {
 

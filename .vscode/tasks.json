@@ -7,7 +7,7 @@
     ],
     "tasks": [
         {
-            "taskName": "compile",
+            "taskName": "build",
             "isBuildCommand": true,
             "showOutput": "silent",
             "problemMatcher": "$gulp-tsc"

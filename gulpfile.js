@@ -1,24 +1,39 @@
-var gulp = require('gulp'),
+var del = require('del'),
+    gulp = require('gulp'),
     glob = require('glob'),
     path = require('path'),
     exec = require('child_process').exec,
-    browserSync = require('browser-sync');
+    browserSync = require('browser-sync'),
+    runSequence = require('run-sequence');
 var $ = require('gulp-load-plugins')({ lazy: true });
 
 gulp.task('help', $.taskListing.withFilters(/:/));
 gulp.task('default', ['help']);
 
-gulp.task('compile', function () {
-    
-    exec('rm -rf dist && tsc -p src');
+gulp.task('clean', function () {
+    return del(['./dist/**/*']);
 });
 
-gulp.task('watch', ['compile'], function () {
-    
-    return gulp.watch('./src/**/*.ts', ['compile']);
+gulp.task('build', function (done) {
+    runSequence('clean', 'compile', done);
 });
 
-gulp.task('test', ['specs:inject', 'imports:inject', 'watch'], function () {
+gulp.task('compile', function (done) {
+    exec('tsc -p src', function (err, stdout, stderr) {
+        console.log(stdout);
+        done();
+    });
+});
+
+gulp.task('watch', ['build'], function () {
+    return gulp.watch('./src/**/*.ts', ['build']);
+});
+
+gulp.task('test', function (done) {
+    runSequence(['specs:inject', 'imports:inject'], 'watch', 'test:serve', done);
+});
+
+gulp.task('test:serve', function () {
     
     var options = {
         port: 3000,
@@ -63,7 +78,7 @@ gulp.task('imports:inject', function(){
 
 function injectScripts(src, label) {
     
-    var options = { read: false, addRootSlash: false };
+    var options = { addRootSlash: false };
     if (label) {
         options.name = 'inject:' + label;
     }

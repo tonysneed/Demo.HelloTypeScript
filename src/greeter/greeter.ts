@@ -1,13 +1,11 @@
 /**
  * HelloTypeScript.Greeter
  */
-export namespace HelloTypeScript {
-    export class Greeter {
-        constructor(public message: string) {
+export class Greeter {
+    constructor(public message: string) {
 
-        }
-        greet(): string {
-            return "Hello " + this.message;
-        }
+    }
+    greet(): string {
+        return "Hello " + this.message;
     }
 }

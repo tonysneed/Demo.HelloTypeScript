@@ -1,7 +1,7 @@
 /**
  * ItalianGreeter
  */
-export default class ItalianGreeter {
+export class ItalianGreeter {
     constructor(public message: string) {
 
     }
